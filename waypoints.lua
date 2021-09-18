@@ -135,7 +135,7 @@ ui.register_page("waypoints", {
 		end
 
 		local waypoint = waypoints.data[sel] or {}
-		local temp = waypoints_temp[player_name][sel] or {}
+		local temp = (waypoints_temp[player_name] and waypoints_temp[player_name][sel]) or {}
 		local default_name = S("Waypoint @1", sel)
 
 		-- Main buttons:
